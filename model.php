@@ -1,7 +1,5 @@
 <?php
 
-register_activation_hook( __FILE__ , 'likeMoneyCreateTables');
-
 function getTableName()
 {
     global $wpdb;
@@ -53,7 +51,7 @@ function getLikeById($id)
     return $row;
 }
 
-insertDummy();
+//insertDummy();
 
 
 

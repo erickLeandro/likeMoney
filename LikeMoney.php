@@ -12,11 +12,10 @@ License: GPL2
 
 $options = get_option('likeMoneySettings');
 
+include('scripts.php');
+include('model.php');
 include('admin-page.php');
+include('plugin.php');
 
-function likeMoneyLoadStyles()
-{
-	wp_enqueue_style('likemoney-styles', plugin_dir_url(__FILE__).'css/likemoney.css');
-}	
+register_activation_hook( __FILE__ , 'likeMoneyCreateTables');
 
-add_action('wp_enqueue_scripts', 'likeMoneyLoadStyles');
